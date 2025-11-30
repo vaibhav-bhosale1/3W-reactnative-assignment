@@ -66,6 +66,32 @@ app.get('/banks', async (req, res) => {
     res.status(500).json({ error: "Server Error", details: error.message });
   }
 });
+// 5. API Route to Update Bank
+app.put('/update-bank/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { bankName, branchName, accountHolderName, accountNumber, ifscCode } = req.body;
+
+    await Bank.findByIdAndUpdate(id, {
+      bankName, branchName, accountHolderName, accountNumber, ifscCode
+    });
+
+    res.json({ message: "Bank Updated Successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Update Failed", details: error.message });
+  }
+});
+
+// 6. API Route to Delete Bank
+app.delete('/delete-bank/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Bank.findByIdAndDelete(id);
+    res.json({ message: "Bank Deleted Successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Delete Failed", details: error.message });
+  }
+});
 // For Android Emulator → use 10.0.2.2
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://10.0.2.2:${PORT}`);
