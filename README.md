@@ -82,14 +82,17 @@ npm run android
 ## 📱 Screenshots
 
 **Bank List**
-<img width="655" height="746" alt="W1" src="https://github.com/user-attachments/assets/d9df247b-179b-4e71-82df-dfef616e1243" />
+
+<img width="300" height="300" alt="W1" src="https://github.com/user-attachments/assets/d9df247b-179b-4e71-82df-dfef616e1243" />
 
 
 **Add Bank**
-<img width="485" height="705" alt="W2" src="https://github.com/user-attachments/assets/191a821f-6760-450a-8482-d5af3d88f03e" />
+
+<img width="300" height="300" alt="W2" src="https://github.com/user-attachments/assets/191a821f-6760-450a-8482-d5af3d88f03e" />
 
 **Edit Bank**
-<img width="480" height="698" alt="W4" src="https://github.com/user-attachments/assets/0d463bbf-5adb-4c1b-b8e7-e72a694ec270" />
+
+<img width="300" height="300" alt="W4" src="https://github.com/user-attachments/assets/0d463bbf-5adb-4c1b-b8e7-e72a694ec270" />
 
 
 
