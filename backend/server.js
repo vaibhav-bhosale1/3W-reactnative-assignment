@@ -57,7 +57,15 @@ app.post('/add-bank', async (req, res) => {
 
 // Start Server
 const PORT = process.env.PORT || 5000;
-
+// 4. API Route to Get All Banks
+app.get('/banks', async (req, res) => {
+  try {
+    const banks = await Bank.find();
+    res.json(banks);
+  } catch (error) {
+    res.status(500).json({ error: "Server Error", details: error.message });
+  }
+});
 // For Android Emulator → use 10.0.2.2
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://10.0.2.2:${PORT}`);

@@ -2,17 +2,23 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AddBankScreen from './src/screens/AddBankScreen';
+import BankListScreen from './src/screens/BankListScreen'; // Import the new screen
 
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="AddBank">
+      <Stack.Navigator initialRouteName="BankList"> 
+        <Stack.Screen 
+          name="BankList" 
+          component={BankListScreen} 
+          options={{ title: 'My Accounts' }}
+        />
         <Stack.Screen 
           name="AddBank" 
           component={AddBankScreen} 
-          options={{ title: 'My Bank App' }}
+          options={{ title: 'Add New Account' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
