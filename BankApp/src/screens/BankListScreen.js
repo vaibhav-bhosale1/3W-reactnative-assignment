@@ -10,7 +10,7 @@ const BankListScreen = ({ navigation }) => {
   const fetchBanks = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://10.0.2.2:5000/banks');
+      const response = await axios.get('https://threew-reactnative-assignment.onrender.com/banks');
       setBanks(response.data);
     } catch (error) {
       console.error("Error fetching banks:", error);
@@ -37,7 +37,7 @@ const BankListScreen = ({ navigation }) => {
           style: "destructive", 
           onPress: async () => {
             try {
-              await axios.delete(`http://10.0.2.2:5000/delete-bank/${id}`);
+              await axios.delete(`https://threew-reactnative-assignment.onrender.com/delete-bank/${id}`);
               fetchBanks(); // Refresh list after delete
             } catch (error) {
               Alert.alert("Error", "Could not delete bank.");

@@ -22,7 +22,7 @@ const EditBankScreen = ({ route, navigation }) => {
     setLoading(true);
     try {
       // API Call to Update
-      await axios.put(`http://10.0.2.2:5000/update-bank/${bank._id}`, {
+      await axios.put(`https://threew-reactnative-assignment.onrender.com/update-bank/${bank._id}`, {
         bankName,
         branchName,
         accountHolderName,

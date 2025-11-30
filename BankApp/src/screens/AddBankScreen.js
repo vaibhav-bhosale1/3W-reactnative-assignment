@@ -24,7 +24,7 @@ const AddBankScreen = () => {
     try {
       // 3. API Call to Backend
       // Note: 10.0.2.2 is the localhost address for Android Emulator
-      const response = await axios.post('http://10.0.2.2:5000/add-bank', {
+      const response = await axios.post('https://threew-reactnative-assignment.onrender.com/add-bank', {
         bankName,
         branchName,
         accountHolderName,
